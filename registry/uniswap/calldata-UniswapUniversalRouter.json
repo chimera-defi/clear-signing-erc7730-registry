@@ -35,22 +35,6 @@
           "outputs": [],
           "stateMutability": "payable"
         },
-        {
-          "type": "function",
-          "name": "executeSigned",
-          "inputs": [
-            { "name": "commands", "type": "bytes", "internalType": "bytes" },
-            { "name": "inputs", "type": "bytes[]", "internalType": "bytes[]" },
-            { "name": "intent", "type": "bytes32", "internalType": "bytes32" },
-            { "name": "data", "type": "bytes32", "internalType": "bytes32" },
-            { "name": "verifySender", "type": "bool", "internalType": "bool" },
-            { "name": "nonce", "type": "bytes32", "internalType": "bytes32" },
-            { "name": "signature", "type": "bytes", "internalType": "bytes" },
-            { "name": "deadline", "type": "uint256", "internalType": "uint256" }
-          ],
-          "outputs": [],
-          "stateMutability": "payable"
-        }
       ]
     }
   },
@@ -84,20 +68,6 @@
         "fields": [],
         "excluded": ["commands", "commands.[]", "inputs", "inputs.[]"]
       },
-      "0x44684dc3": {
-        "$id": "executeSigned",
-        "intent": "Execute Signed Swap",
-        "fields": [
-          {
-            "path": "deadline",
-            "label": "Deadline",
-            "format": "date",
-            "params": { "encoding": "timestamp" }
-          }
-        ],
-        "required": ["deadline"],
-        "excluded": ["commands", "commands.[]", "inputs", "inputs.[]", "intent", "data", "verifySender", "nonce", "signature", "signature.[]"]
-      }
     }
   }
 }
