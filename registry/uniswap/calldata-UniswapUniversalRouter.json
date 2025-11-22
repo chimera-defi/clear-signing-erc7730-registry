@@ -40,11 +40,7 @@
   },
   "metadata": {
     "owner": "Uniswap",
-    "info": {
-      "legalName": "Uniswap Labs",
-      "deploymentDate": "2023-06-01T00:00:00Z",
-      "url": "https://uniswap.org/"
-    }
+    "info": { "legalName": "Uniswap Labs", "deploymentDate": "2023-06-01T00:00:00Z", "url": "https://uniswap.org/" }
   },
   "display": {
     "formats": {
@@ -52,17 +48,8 @@
         "$id": "execute",
         "intent": "Execute Swap",
         "fields": [
-          {
-            "path": "@.value",
-            "label": "Amount to Send",
-            "format": "amount"
-          },
-          {
-            "path": "deadline",
-            "label": "Deadline",
-            "format": "date",
-            "params": { "encoding": "timestamp" }
-          }
+          { "path": "@.value", "label": "Amount to Send", "format": "amount" },
+          { "path": "deadline", "label": "Deadline", "format": "date", "params": { "encoding": "timestamp" } }
         ],
         "required": ["deadline"],
         "excluded": ["commands", "commands.[]", "inputs", "inputs.[]"]
@@ -70,13 +57,7 @@
       "0x24856bc3": {
         "$id": "execute",
         "intent": "Execute Swap",
-        "fields": [
-          {
-            "path": "@.value",
-            "label": "Amount to Send",
-            "format": "amount"
-          }
-        ],
+        "fields": [{ "path": "@.value", "label": "Amount to Send", "format": "amount" }],
         "excluded": ["commands", "commands.[]", "inputs", "inputs.[]"]
       }
     }
