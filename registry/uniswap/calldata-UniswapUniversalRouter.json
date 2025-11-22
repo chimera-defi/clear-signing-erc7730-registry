@@ -53,6 +53,11 @@
         "intent": "Execute Swap",
         "fields": [
           {
+            "path": "@.value",
+            "label": "ETH Amount",
+            "format": "amount"
+          },
+          {
             "path": "deadline",
             "label": "Deadline",
             "format": "date",
@@ -65,7 +70,13 @@
       "0x24856bc3": {
         "$id": "execute",
         "intent": "Execute Swap",
-        "fields": [],
+        "fields": [
+          {
+            "path": "@.value",
+            "label": "ETH Amount",
+            "format": "amount"
+          }
+        ],
         "excluded": ["commands", "commands.[]", "inputs", "inputs.[]"]
       }
     }
