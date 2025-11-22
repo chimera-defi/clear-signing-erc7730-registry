@@ -13,7 +13,45 @@
         { "chainId": 8453, "address": "0x6ff5693b99212da76ad316178a184ab56d299b43" },
         { "chainId": 81457, "address": "0x643770E279d5D0733F21d6DC03A8efbABf3255B4" }
       ],
-      "abi": "https://github.com/Uniswap/universal-router/blob/main/contracts/UniversalRouter.sol"
+      "abi": [
+        {
+          "type": "function",
+          "name": "execute",
+          "inputs": [
+            { "name": "commands", "type": "bytes", "internalType": "bytes" },
+            { "name": "inputs", "type": "bytes[]", "internalType": "bytes[]" },
+            { "name": "deadline", "type": "uint256", "internalType": "uint256" }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "execute",
+          "inputs": [
+            { "name": "commands", "type": "bytes", "internalType": "bytes" },
+            { "name": "inputs", "type": "bytes[]", "internalType": "bytes[]" }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "executeSigned",
+          "inputs": [
+            { "name": "commands", "type": "bytes", "internalType": "bytes" },
+            { "name": "inputs", "type": "bytes[]", "internalType": "bytes[]" },
+            { "name": "intent", "type": "bytes32", "internalType": "bytes32" },
+            { "name": "data", "type": "bytes32", "internalType": "bytes32" },
+            { "name": "verifySender", "type": "bool", "internalType": "bool" },
+            { "name": "nonce", "type": "bytes32", "internalType": "bytes32" },
+            { "name": "signature", "type": "bytes", "internalType": "bytes" },
+            { "name": "deadline", "type": "uint256", "internalType": "uint256" }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        }
+      ]
     }
   },
   "metadata": {
@@ -26,7 +64,7 @@
   },
   "display": {
     "formats": {
-      "0xb61d27f6": {
+      "0x3593564c": {
         "$id": "execute",
         "intent": "Execute Swap",
         "fields": [
@@ -37,14 +75,16 @@
             "params": { "encoding": "timestamp" }
           }
         ],
-        "required": ["deadline"]
+        "required": ["deadline"],
+        "excluded": ["commands", "commands.[]", "inputs", "inputs.[]"]
       },
-      "0x1a4c9070": {
+      "0x24856bc3": {
         "$id": "execute",
         "intent": "Execute Swap",
-        "fields": []
+        "fields": [],
+        "excluded": ["commands", "commands.[]", "inputs", "inputs.[]"]
       },
-      "0x49b5c8bf": {
+      "0x44684dc3": {
         "$id": "executeSigned",
         "intent": "Execute Signed Swap",
         "fields": [
@@ -55,7 +95,8 @@
             "params": { "encoding": "timestamp" }
           }
         ],
-        "required": ["deadline"]
+        "required": ["deadline"],
+        "excluded": ["commands", "commands.[]", "inputs", "inputs.[]", "intent", "data", "verifySender", "nonce", "signature", "signature.[]"]
       }
     }
   }
