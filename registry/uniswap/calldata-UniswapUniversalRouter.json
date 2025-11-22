@@ -34,7 +34,7 @@
           ],
           "outputs": [],
           "stateMutability": "payable"
-        },
+        }
       ]
     }
   },
@@ -67,7 +67,7 @@
         "intent": "Execute Swap",
         "fields": [],
         "excluded": ["commands", "commands.[]", "inputs", "inputs.[]"]
-      },
+      }
     }
   }
 }
