@@ -54,7 +54,7 @@
         "fields": [
           {
             "path": "@.value",
-            "label": "ETH Amount",
+            "label": "Amount to Send",
             "format": "amount"
           },
           {
@@ -73,7 +73,7 @@
         "fields": [
           {
             "path": "@.value",
-            "label": "ETH Amount",
+            "label": "Amount to Send",
             "format": "amount"
           }
         ],
